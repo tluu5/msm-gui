@@ -29,7 +29,7 @@
   </div>
 
   <div>
-    <label for="director_field">Director</label>
+    <label for="director_field">Director ID</label>
     <input id="director_field" type="text" name="the_director_id">
   </div>
 
@@ -86,19 +86,7 @@
 
     <td>
       <% matching_directors = Director.where({ :id => a_movie.director_id }) %>
-      
-      <% the_director = matching_directors.at(0) %>
 
-      <% if the_director == nil %>
-        Uh oh! We weren't able to find a director for this movie.
-      <% else %>
-        <%= the_director.name %>
-      <% end %>
-
-      <% dir_id = @the_movie.director_id %>
-    
-      <% matching_directors = Director.where({ :id => dir_id }) %>
-    
       <% the_director = matching_directors.at(0) %>
 
       <% if the_director == nil %>

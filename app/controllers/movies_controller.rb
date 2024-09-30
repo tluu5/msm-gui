@@ -10,7 +10,7 @@ class MoviesController < ApplicationController
     @the_movie.image = params.fetch("the_image")
     @the_movie.director_id = params.fetch("the_director_id")
     @the_movie.save
-    redirect_to("/movies/#{the_movie.id}")
+    redirect_to("/movies/#{@the_movie.id}")
   end
 
   def create

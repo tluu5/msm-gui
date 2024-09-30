@@ -8,7 +8,7 @@ class ActorsController < ApplicationController
     @the_actor.bio = params.fetch("the_bio")
     @the_actor.image = params.fetch("the_image")
     @the_actor.save
-    redirect_to("/actors/#{the_actor.id}")
+    redirect_to("/actors/#{@the_actor.id}")
   end
 
   def create
